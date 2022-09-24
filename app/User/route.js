@@ -5,13 +5,22 @@ const router = express.Router();
 //api 1 get all users
 router.get("/", handlerGetAllUser);
 
-//api 3 create users
+//api 2 get by fullname
+router.get("/search", handlerGetUserByFullName);
+
+//api 3 get by id
+router.get("/:id", handlerGetUserById);
+
+//api 4 create users
 router.post("/", handlerPostUser);
 
-//api 4 update users
+//api 5 update users
 router.put("/:id", handlerPutUser);
 
-//api 5 delete users
+//api 6 delete users
 router.delete("/:id", handlerDeleteUser);
+
+//api 7 login user
+router.post("/login", handlerLoginUser);
 
 module.exports = router;

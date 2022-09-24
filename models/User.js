@@ -52,6 +52,7 @@ function createModelUser(Sequelize, DataTypes) {
     },
     {
       tablename: "users",
+      timestamps: true,
     }
   );
   return User;
